@@ -1,0 +1,28 @@
+
+
+.boxes{
+    height: 600px;
+    background-color: $primary-color;
+    display: flex;
+    flex-wrap: wrap;
+    // .box{
+    //     @extend %box;
+    // }
+
+    // .box:nth-child(odd){
+    //     background-color: $primary-box-color;
+    // }
+
+    // .box:nth-child(even){
+    //     background-color: $secondary-box-color;
+    // }
+
+    .box:nth-child(odd){
+        @include boxTheme($bg-color:$primary-box-color)
+    }
+
+    .box:nth-child(even){
+        @include boxTheme($bg-color:$secondary-box-color)
+    }
+
+}
